@@ -10,8 +10,9 @@ using System.IO;
 using System.Threading.Tasks;
 using tododiana.Common.Models;
 using tododiana.Common.Responses;
+using tododiana.Functions.Entities;
 
-namespace tododiana.Functions.Entities.Functions
+namespace tododiana.Functions.Functions
 {
     public static class TodoApi
     {
@@ -73,10 +74,10 @@ namespace tododiana.Functions.Entities.Functions
             TableQuery<TodoEntity> query = new TableQuery<TodoEntity>();
             TableQuerySegment<TodoEntity> todos = await todoTable.ExecuteQuerySegmentedAsync(query, null);
 
-            string massage = "Retrieved all todos. "; 
+            string message = "Retrieved all todos. "; 
 
-            string message = "New todo stored in table";
             log.LogInformation(message);
+
 
                 
             return new OkObjectResult(new Response

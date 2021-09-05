@@ -4,8 +4,9 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
 using Microsoft.WindowsAzure.Storage.Table;
+using tododiana.Functions.Entities;
 
-namespace tododiana.Functions.Entities.Functions
+namespace tododiana.Functions.Functions
 {
     public static class ScheduledFunction
     {
